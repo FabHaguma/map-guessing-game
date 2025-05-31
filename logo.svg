@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Globe Background -->
+  <circle cx="50" cy="50" r="45" fill="#A0D2DB" /> <!-- Light blue for ocean -->
+
+  <!-- Simplified Continents (Abstract Shapes) -->
+  <!-- You can add more complex paths here for more detail if desired -->
+  <path d="M30 30 Q40 20 50 30 T70 30 Q75 40 70 50 T50 70 Q30 65 30 50 T30 30 Z" fill="#82C491" stroke="#047857" stroke-width="1"/> <!-- Green for land -->
+  <path d="M25 60 Q30 75 45 70 T60 75" fill="#82C491" stroke="#047857" stroke-width="1" />
+
+  <!-- Map Pin -->
+  <path d="M50 15
+           A 15 15 0 1 1 50 45
+           A 15 15 0 1 1 50 15 Z"
+        fill="#EF4444" /> <!-- Red pin head -->
+  <path d="M50 40 L45 55 L50 85 L55 55 Z"
+        fill="#EF4444" /> <!-- Red pin stem -->
+  
+  <!-- Inner circle for pin (optional detail) -->
+  <circle cx="50" cy="30" r="5" fill="white" />
+
+  <!-- Optional Game Title Text (can be added outside SVG if preferred) -->
+  <!-- 
+  <text x="50" y="95" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">
+    Earth Map Guess
+  </text> 
+  -->
+</svg>
