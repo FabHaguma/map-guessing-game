@@ -1,0 +1,90 @@
+/* src/App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+  /* max-width: 1400px; Increased max-width for better map display */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff; /* Card-like background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Softer shadow */
+}
+
+.app-header h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.app-header p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.game-area {
+  display: flex;
+  flex-grow: 1;
+  gap: 20px; /* Space between list and map */
+}
+
+.country-list-container {
+  flex: 1; /* Takes 1 part of the space */
+  min-width: 250px; /* Minimum width for the list */
+  max-width: 350px; /* Maximum width for the list */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevents content from spilling before overflow-y kicks in */
+  min-height: 0; /* Allow container to shrink and enable internal scrolling */
+  max-height: calc(100vh - 220px); /* Ensure it respects the same max height as the map content */
+}
+
+.country-list-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+
+.map-container {
+  flex: 3; /* Takes 3 parts of the space */
+  /* background-color: #fff; */ /* Moved to MapComponent.css for wrapper */
+  border-radius: 8px;
+  /* padding: 15px; */ /* Padding might interfere with full bleed map, apply to wrapper if needed or map content */
+  padding: 0; /* Let MapComponentWrapper handle its padding or content spacing */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex; /* It's already flex, this is fine */
+  flex-direction: column;
+  /* align-items: center; */ /* Remove or adjust: MapComponentWrapper is 100% width/height */
+  /* justify-content: center; */ /* Remove or adjust */
+  overflow: hidden; /* Good for containers that might clip children */
+  max-height: calc(100vh - 220px); /* Ensure it respects the same max height as the map content */
+}
+
+
+
+
+
+.app-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 0.85em;
+  color: #777;
+  border-top: 1px solid #eee;
+}

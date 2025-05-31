@@ -1,0 +1,64 @@
+/* src/components/MapComponent.css */
+.map-component-wrapper {
+  position: relative; /* For potential absolute positioning of children like zoom controls */
+  width: 100%;
+  height: 100%;     /* Occupy full space given by parent (.map-container) */
+  background-color: #ffffff; /* Ensures the map background is white if SVG is transparent */
+  border-radius: 10px; /* Inherit border-radius from parent (.map-container) */
+  overflow: hidden; /* Clip any overflow, good practice for map containers */
+}
+
+/* Target the SVG element rendered by ComposableMap */
+.map-component-wrapper svg {
+  display: block; /* Removes extra space below inline SVGs */
+  width: 100%;
+  height: 100%; /* Make SVG fill the wrapper height */
+  max-height: calc(100vh - 200px); /* Prevent map from being too tall on portrait views, adjust as needed */
+                                  /* 220px accounts for header, footer, padding etc. */
+}
+
+/* Styles for optional zoom controls (if implemented later) */
+.zoom-controls {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000; /* Ensure controls are above the map */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.zoom-controls button {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+
+.zoom-controls button:hover {
+  background-color: #fff;
+}
+
+
+.interactive-geography {
+  cursor: pointer; /* Indicate clickable map regions */
+}
+
+.non-interactive-geography {
+  cursor: default;
+  /* Optionally slightly different styling for non-interactive regions if we implement that logic */
+}
+
+.interactive-geography {
+  cursor: pointer;
+}
+
+.locked-geography {
+  cursor: default; /* Indicate non-interactive */
+}

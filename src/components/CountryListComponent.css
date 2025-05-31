@@ -1,0 +1,172 @@
+/* src/components/CountryListComponent.css */
+.country-list-ul { /* Matches class name used in JSX */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.country-list-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer; /* Indicate it's clickable */
+  font-size: 14px;
+  color: #444;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.country-list-item:last-child {
+  border-bottom: none;
+}
+
+.country-list-item:hover {
+  background-color: #f8fafc; /* Subtle hover as per spec */
+}
+
+.country-list-item.selected {
+  background-color: #EFF6FF; /* Highlighted State: subtle fill (from map spec) */
+  color: #2563EB;           /* Highlighted State: blue text */
+  font-weight: 600;
+}
+
+.selection-indicator {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #2563EB;
+  margin-left: 5px;
+}
+
+.all-assigned-message {
+  text-align: center;
+  padding: 20px;
+  color: #10B981; /* Green for success */
+  font-weight: bold;
+}
+
+.country-list-item.selected {
+  background-color: #EFF6FF; /* Highlighted State: subtle fill (from map spec) */
+  color: #2563EB;           /* Highlighted State: blue text */
+  font-weight: 600;
+}
+
+.country-list-item.error-flash {
+  background-color: #FEE2E2; /* Brief red flash (bg) as per spec */
+  color: #B91C1C; /* Darker red text for contrast */
+  animation: quick-shake 0.3s; /* Optional: add a little shake */
+}
+
+#remaining-count {
+  font-weight: light;
+  font-size: 0.7em;
+  color: #2563EB;
+}
+
+/* src/components/CountryListComponent.css */
+/* ... existing styles ... */
+
+.list-header {
+  margin-bottom: 10px;
+}
+
+.list-header h2 {
+  margin-bottom: 8px; /* Space between title and search bar */
+}
+
+.country-search-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.no-results-message {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+.list-actions {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: space-around; /* Distribute buttons */
+}
+
+.action-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.undo-button {
+  background-color: #fbbf24; /* Amber */
+  color: #78350f; /* Dark amber text */
+}
+.undo-button:hover:not(:disabled) {
+  background-color: #f59e0b;
+}
+
+.reset-button {
+  background-color: #f87171; /* Red */
+  color: #7f1d1d; /* Dark red text */
+}
+.reset-button:hover:not(:disabled) {
+  background-color: #ef4444;
+}
+
+@keyframes quick-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+
+.list-settings {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.setting-group label {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.setting-group select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.next-level-button {
+  background-color: #34D399; /* Emerald */
+  color: #065f46; /* Dark emerald text */
+}
+.next-level-button:hover:not(:disabled) {
+  background-color: #10B981;
+}
