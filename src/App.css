@@ -76,10 +76,6 @@
   max-height: calc(100vh - 220px); /* Ensure it respects the same max height as the map content */
 }
 
-
-
-
-
 .app-footer {
   text-align: center;
   margin-top: 30px;
@@ -87,4 +83,33 @@
   font-size: 0.85em;
   color: #777;
   border-top: 1px solid #eee;
+}
+
+.app-header {
+  /* ... existing app-header styles ... */
+  display: flex; /* If you want to align title and score nicely */
+  justify-content: space-between; /* Puts title left, score right */
+  align-items: center; /* Vertically align items */
+  padding: 15px 25px; /* Adjust padding if needed */
+}
+
+.app-header h1 {
+  margin: 0; /* Remove default margin if flexbox is used above */
+}
+
+.score-display {
+  font-size: 1.4em; /* Make it larger */
+  font-weight: bold;
+  color: #333; /* Or your preferred color */
+  background-color: #e9ecef; /* Light background highlight */
+  padding: 8px 15px;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  min-width: 120px; /* Ensure it has some width */
+  text-align: center;
+}
+
+.score-value {
+  color: #007bff; /* Make the actual number a different color, e.g., blue */
+  margin-left: 5px;
 }

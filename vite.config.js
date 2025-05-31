@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ command }) => {
   // Determine base path based on command (serve or build)
   // and specifically for GitHub Pages deployment
-  let base = '/'; // Default for development
+  let base = '/map-guessing-game/'; // Default for development
 
   // For GitHub Pages, the base path is /<repository-name>/
   // You can get this from your package.json homepage or set it directly

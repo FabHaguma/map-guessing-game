@@ -49,8 +49,10 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Earth Map Guessing Game</h1>
-        <p>Score: {score}</p> {/* Display current score */}
+        <h1>Map Guessing Game</h1>
+        <div className="score-display"> {/* Added a wrapper */}
+          Score: <span className="score-value">{score}</span>
+        </div>
       </header>
       <main className="game-area">
         <CountryListComponent />
