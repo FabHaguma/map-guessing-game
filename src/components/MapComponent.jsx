@@ -2,7 +2,7 @@
 import React from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import useGameStore from '../store/gameStore';
-import countriesGeoJson from '../../public/countries.geo.json';
+// import countriesGeoJson from '../../public/countries.geo.json';
 import { FLASH_DURATION_MS } from '../config/gameConfig';
 import './MapComponent.css';
 
@@ -50,7 +50,7 @@ const MapComponent = () => {
         projection="geoNaturalEarth1"
         projectionConfig={{ scale: 200 }} // Your preferred scale
       >
-        <Geographies geography={countriesGeoJson}>
+        <Geographies geography={"./countries.geo.json"}>
           {({ geographies }) =>
             geographies.map(geo => {
               const countryIsoA2 = geo.properties.iso_a2;
